@@ -1,0 +1,31 @@
+name: Scrape latest data
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 10 * * 2'  # 10:05h UTC on Tuesday
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Fetch latest data
+      run: |
+        ./fetch.sh > feed.ical
+
+    - name: Fail on zero-size output
+      run: |-
+        [ -s feed.ical ] || exit 2
+
+    - name: Commit and push if it changed
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        branch: main
+        file_pattern: feed.ical
+        commit_user_name: GitHub Actions # defaults to "GitHub Actions"
+        commit_user_email: actions@github.com # defaults to "actions@github.com"
+        commit_author: GitHub Actions <actions@github.com> # defaults to author of the commit that triggered the run
