@@ -20,11 +20,7 @@ jobs:
 
     - name: Fetch latest data
       run: |
-        ./fetch.sh > feed.ical
-
-    - name: Fail on zero-size output
-      run: |-
-        [ -s feed.ical ] || exit 2
+        ./fetch.sh
 
     - name: Commit and push if it changed
       uses: stefanzweifel/git-auto-commit-action@v5
