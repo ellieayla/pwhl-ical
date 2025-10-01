@@ -21,7 +21,7 @@ jobs:
     - name: Fetch latest data
       run: |
         ./fetch.sh
-		./update-readme.sh
+        ./update-readme.sh
 
     - name: Commit and push if it changed
       uses: stefanzweifel/git-auto-commit-action@v5
