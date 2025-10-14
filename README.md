@@ -8,3 +8,4 @@ This tiny shell script grabs the ICAL files and re-serves them as static assets 
 ## Seasons
 
  * [season-8.ical](https://github.com/ellieayla/pwhl-ical/raw/refs/heads/main/season-8.ical)
+ * [season-7.ical](https://github.com/ellieayla/pwhl-ical/raw/refs/heads/main/season-7.ical)
