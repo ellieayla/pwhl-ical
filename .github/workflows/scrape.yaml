@@ -16,7 +16,7 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Fetch latest data
       run: |
@@ -24,7 +24,7 @@ jobs:
         ./update-readme.sh
 
     - name: Commit and push if it changed
-      uses: stefanzweifel/git-auto-commit-action@v5
+      uses: stefanzweifel/git-auto-commit-action@v7
       with:
         branch: main
         file_pattern: 'season-*.ical README.md'
