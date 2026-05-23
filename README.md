@@ -7,3 +7,12 @@ This tiny shell script grabs the ICAL files and re-serves them as static assets 
 
 ## Seasons
 
+ * season-9.ical finished.
+ * season-8.ical finished.
+ * season-7.ical finished.
+ * season-6.ical finished.
+ * season-5.ical finished.
+ * season-4.ical finished.
+ * season-3.ical finished.
+ * season-2.ical finished.
+ * season-1.ical finished.
