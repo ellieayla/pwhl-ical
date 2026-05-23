@@ -11,7 +11,7 @@ do
 	 curl -s $CAL_LINK | awk -v ORS="\r\n" -v FS=: -v OFS=: 'BEGIN { printf "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Hockeytech//Leaguestat iCal//EN\r\nMETHOD:PUBLISH\r\n";} END {printf "END:VCALENDAR\r\n";} /^BEGIN:VEVENT/{flag=1};$1 == "DESCRIPTION" {$2="https://www.youtube.com/@thepwhlofficial/streams"}; flag;/^END:VEVENT/{flag=0}' > season-$SEASON.ical
  else
 	 echo "Season $SEASON at URL has no mobile_calendar.link"
-	 rm -vf "season-$SEASON.ical"
+	 echo Finished > "season-$SEASON.ical"
  fi
 done
 
