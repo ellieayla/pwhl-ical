@@ -15,5 +15,6 @@ This tiny shell script grabs the ICAL files and re-serves them as static assets 
  * season-4.ical finished.
  * season-3.ical finished.
  * season-2.ical finished.
+ * [season-11.ical](https://github.com/ellieayla/pwhl-ical/raw/refs/heads/main/season-11.ical)
  * [season-10.ical](https://github.com/ellieayla/pwhl-ical/raw/refs/heads/main/season-10.ical)
  * season-1.ical finished.
